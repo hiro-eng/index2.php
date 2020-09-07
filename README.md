@@ -6,7 +6,27 @@
 </head>
 <body>
 
-
+<form action="vote.php" method="post">
+<table>
+  <tr>
+    <td>小泉首相</td>
+    <td><input type="radio" name="vote" value="0"></td>
+  </tr>
+  <tr>
+    <td>ビンラディン</td>
+    <td><input type="radio" name="vote" value="1"></td>
+  </tr>
+  <tr>
+    <td>愛子さま</td>
+    <td><input type="radio" name="vote" value="2"></td>
+  </tr>
+  <tr>
+    <td>その他</td>
+    <td><input type="radio" name="vote" value="3"></td>
+  </tr>
+</table>
+<p><input type="submit" value="投票"></p>
+</form>
 <p>
 あなたは
 <?php
