@@ -6,6 +6,13 @@
 </head>
 <body>
     
+<form action="ques.php" method="post">
+<p>身長: <input name="height" size="5"> cm</p>
+<p>体重: <input name="weight" size="5"> kg</p>
+<p><input type="submit" value="送る">
+<input type="reset" value="クリア"></p>
+</form>
+
 
 <h1>いま何時？</h1>
 
