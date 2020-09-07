@@ -1,3 +1,12 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    
+
 <h1>いま何時？</h1>
 
 <p>いま
@@ -6,3 +15,6 @@
   echo date("Y 年 m 月 d 日 H 時 i 分 s 秒");
 ?>
 です。</p>
+
+</body>
+</html>
