@@ -35,6 +35,19 @@ echo date("Y 年 m 月 d 日 H 時 i 分 s 秒"); ?>
 ?>
 曜日です。</p>
 
+
+<p>
+<?php
+  date_default_timezone_set('Asia/Tokyo');
+  $h = date("H");
+  if ($h < 10)
+    echo "おはようございます";
+  elseif ($h < 18)
+    echo "こんにちは";
+  else
+    echo "こんばんは";
+?>
+</p>
 <p>
 <?php
   date_default_timezone_set('Asia/Tokyo');
