@@ -5,6 +5,10 @@
     <title>Document</title>
 </head>
 <body>
+
+<?php
+  date_default_timezone_set('Asia/Tokyo');
+?>
     
 <form action="ques.php" method="post">
 <p>身長: <input name="height" size="5"> cm</p>
