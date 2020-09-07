@@ -6,6 +6,33 @@
 </head>
 <body>
 
+
+<?php
+$now = getdate(); // 現在時刻の情報を持った配列を作成
+$month = $now['mon']; // 今月
+$today = $now['mday']; // 今日
+$year = $now['year']; // 今年
+ 
+// 「来年の今日」の日時情報を持った配列を作成
+$nextyear = getdate( mktime( 0, 0, 0, $month, $today, $year+1 ) );
+ 
+// 現在時刻の方の配列情報出力
+echo '<pre>';
+print_r($now);
+echo '</pre>';
+ 
+// 今日の日付と時間を出力
+echo '今日は';
+echo $year.'年'.$month.'月'.$today.'日 ';
+echo $now['minutes'].'分';
+echo $now['minutes'].'分';
+echo $now['hours'].'時';
+echo $now['minutes'].'分';
+echo $now['seconds'].'秒';
+echo "<br />\n";
+echo '来年の今日の曜日は'.$nextyear['weekday'];
+?>
+
 <?php
   $num = rand(0, 1);
   if ($num == 0) {
