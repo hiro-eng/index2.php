@@ -6,6 +6,10 @@
 </head>
 <body>
 
+
+<?php
+echo date("Y/m/d g:i");
+?>
 <?php
 // 文字列のアルファベットのところはすべてフォーマット文字列です
 print "今日は".date("Y年n月j日")."　時刻は".date("G時i分s秒")."です。";
@@ -187,6 +191,10 @@ echo date("Y 年 m 月 d 日 H 時 i 分 s 秒"); ?>
   echo $week[date("w")];
 ?>
 曜日です。</p>
+
+<?php
+echo date("Y/m/d g:i");
+?>
 
 
 <p>
