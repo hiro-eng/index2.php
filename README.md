@@ -6,6 +6,18 @@
 </head>
 <body>
 
+
+<p>
+あなたは
+<?php
+  echo "<img src=\"$c3.jpg\" alt=\"$c3\">";
+  echo "<img src=\"$c2.jpg\" alt=\"$c2\">";
+  echo "<img src=\"$c1.jpg\" alt=\"$c1\">";
+  echo "<img src=\"$c0.jpg\" alt=\"$c0\">";
+?>
+人目のお客様です。
+</p>
+
 <?php
   date_default_timezone_set('Asia/Tokyo');
 ?>
