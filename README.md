@@ -8,6 +8,82 @@
 
 
 <?php
+
+//現在日時を取得
+$now = getdate();
+
+//現在の「時」を取得
+$hr = $now[hours];
+
+//現在の「分」を取得
+$mn = $now[minutes];
+
+//「短針」のX座標を取得
+$sx = cos(deg2rad(90 - ($hr/12 + $mn/60/12) * 360)) * 65 + 120;
+
+//「短針」のY座標を取得
+$sy = -sin(deg2rad(90 - ($hr/12 + $mn/60/12) * 360)) * 65 + 120;
+
+//「長針」のX座標を取得
+$lx = cos(deg2rad(90 - $mn/60 * 360)) * 100 + 120;
+
+//「長針」のY座標を取得
+$ly = -sin(deg2rad(90 - $mn/60 * 360)) * 100 + 120;
+
+//240x240の画像キャンパスを作成
+$img = imagecreate(240,240);
+
+//背景色を設定
+$bgcolor = imagecolorallocate($img,0,0,0);
+
+//背景色で塗りつぶし
+imagefilledrectangle($img,0,0,240,240,$bgcolor);
+
+//円の色を設定
+$cccolor = imagecolorallocate($img,100,100,100);
+
+//円を描く
+imagearc($img,120,120,238,238,0,360,$cccolor);
+
+//円の中心を塗りつぶす
+imagefill($img,120,120,$cccolor);
+
+//「短針」の色を設定
+$shcolor = imagecolorallocate($img,255,255,255);
+
+//「短針」を描く
+imageline($img,120,120,$sx,$sy,$shcolor);
+
+//「長針」の色を設定
+$lhcolor = imagecolorallocate($img,255,255,255);
+
+//「長針」を描く
+imageline($img,120,120,$lx,$ly,$lhcolor);
+
+//文字列の色を設定
+$mjcolor = imagecolorallocate($img,255,255,255);
+
+//10未満の場合に文字列を変更
+if ($hr < 10) {
+$hr = "0".$hr;
+}
+if ($mn < 10) {
+$mn = "0".$mn;
+}
+
+//文字列を指定
+$moji = $hr.":".$mn;
+
+//文字列を描く
+imagestring($img,2,202,220,$moji,$mjcolor);
+
+//できた画像をJPEG形式で保存
+imagejpeg($img,"clock.jpg");
+
+?>
+
+
+<?php
 $now = getdate(); // 現在時刻の情報を持った配列を作成
 $month = $now['mon']; // 今月
 $today = $now['mday']; // 今日
