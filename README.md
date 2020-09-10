@@ -208,6 +208,8 @@ echo date("Y/m/d g:i");
   else
     echo "こんばんは";
 ?>
+
+
 </p>
 <p>
 <?php
@@ -227,6 +229,8 @@ echo date("Y/m/d g:i");
 <p>このページは
 <?php echo date("Y 年 m 月 d 日 H 時 i 分 s 秒", filemtime("time.php")); ?>
 に更新されました。</p>
+
+
 
 </body>
 </html>
